@@ -1,6 +1,6 @@
-package phj.webshop.domain;
+package phj.webshop.controller;
 
-public class Member {
+public class MemberForm {
     private String name;
     private String id;
     private String pw;

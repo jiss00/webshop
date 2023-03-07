@@ -1,62 +1,20 @@
-<!DOCTYPE html>
-<style>
-   .main {
-position: absolute;
-left : 50% ;
-top: 50% ;
-transform: translate(-50%,-50%);
-width: 400px;
-height: 500px;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-border: 2px solid black;
-border-radius: 7px;
-}
-
-.logo {
-margin-top: 50px;
-margin-bottom: 70px;
-}
-
-#login {
-width: 100%;
-background-color: green;
-border-color: transparent;
-color: white;
-}
-
-.account {
-display: block;
-margin-bottom: 8px;
-padding: 10px;
-border: 1px solid lightgray;
-border-radius: 3px;
-}
-
-#alert {
-border-color: transparent;
-}
-</style>
-<html>
-<head>
-    <title>로그인</title>
-    <meta charset="utf-8">
-</head>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8">
 <body>
-<div class="main">
-    <h1 class="logo">UGV 회원가입</h1>
-    <div class="container">
-        <input type="text" placeholder="이름" id="name" class="account">
-        <input type="password" placeholder="아이디" id="id" class="account">
-        <input type="password" placeholder="비밀번호" id="password" class="account">
-        <input type="password" placeholder="전화번호" id="telephone" class="account">
-        <input type="password" placeholder="주소" id="address" class="account">
-        <button id="login" class="account">회원가입</button>
-        <p id="alert" class="account"> </p>
-    </div>
-</div>
-<script src="script.js"></script>
+<div class="container">
+    <form action="join" method="post">
+        <div class="form-group">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" placeholder="이름을입력하세요">
+            <input type="text" id="id" name= "id" placeholder="아이디를 입력하세요">
+            <input type="password" id="password" name="pw" placeholder="비밀번호를 입력하세요">
+            <input type="text" id="tel" name="tel" placeholder="전화번호를 입력하세요">
+            <input type="text" id="address" name="address" placeholder="주소를 입력하세요">
+
+        </div>
+        <button type="submit">회원가입</button>
+    </form>
+</div> <!-- /container -->
 </body>
 </html>
