@@ -1,4 +1,4 @@
-package Member;
+package phj.webshop.Member;
 
 public class Member {
     private String name;
