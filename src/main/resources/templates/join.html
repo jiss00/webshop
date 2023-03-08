@@ -1,19 +1,50 @@
 <!DOCTYPE HTML>
+<style>
+.container{
+position: absolute;
+left : 50% ;
+top: 50% ;
+transform: translate(-50%,-50%);
+width: 400px;
+height: 500px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+border: 2px solid black;
+border-radius: 7px;
+}
+.account {
+display: block;
+margin-bottom: 8px;
+padding: 10px;
+border: 1px solid lightgray;
+border-radius: 3px;
+}
+.logo{
+font-size:30px;
+}
+.button{
+width : 120px;
+height : 50px;
+background-color : green;
+color: white
+}
+</style>
 <html xmlns:th="http://www.thymeleaf.org">
 <meta charset="utf-8">
 <body>
 <div class="container">
     <form action="join" method="post">
         <div class="form-group">
-            <label for="name">이름</label>
-            <input type="text" id="name" name="name" placeholder="이름을입력하세요">
-            <input type="text" id="id" name= "id" placeholder="아이디를 입력하세요">
-            <input type="password" id="password" name="pw" placeholder="비밀번호를 입력하세요">
-            <input type="text" id="tel" name="tel" placeholder="전화번호를 입력하세요">
-            <input type="text" id="address" name="address" placeholder="주소를 입력하세요">
-
+            <label class ="logo">UGV 회원가입</label>
+            <input type="text" id="name" name="name" class="account" placeholder="이름을입력하세요">
+            <input type="text" id="id" name= "id" class="account" placeholder="아이디를 입력하세요">
+            <input type="password" id="password" name="pw" class="account" placeholder="비밀번호를 입력하세요">
+            <input type="text" id="tel" name="tel" class="account" placeholder="전화번호를 입력하세요">
+            <input type="text" id="address" name="address" class="account" placeholder="주소를 입력하세요">
         </div>
-        <button type="submit">회원가입</button>
+        <button type="submit" class ="button">신청하기</button>
     </form>
 </div> <!-- /container -->
 </body>
