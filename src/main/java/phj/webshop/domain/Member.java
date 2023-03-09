@@ -1,5 +1,7 @@
 package phj.webshop.domain;
 
+import java.util.Optional;
+
 public class Member {
     private String name;
     private String id;

@@ -2,7 +2,6 @@ package phj.webshop.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,11 +11,11 @@ import phj.webshop.service.MemberService;
 import java.util.List;
 
 @Controller
-public class MemberController {
+public class JoinController {
     private MemberService memberService;
 
     @Autowired
-    public MemberController(MemberService memberService) {
+    public JoinController(MemberService memberService) {
         this.memberService = memberService;
     }
 
@@ -33,7 +32,6 @@ public class MemberController {
         member.setPw(form.getPw());
         member.setTel(form.getTel());
         member.setAddress(form.getAddress());
-
         memberService.join(member);
 
         return "redirect:/"; //홈화면으로 보내는것.

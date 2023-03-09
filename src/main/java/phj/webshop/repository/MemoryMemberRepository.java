@@ -13,14 +13,13 @@ public class MemoryMemberRepository implements MemberRepository {
     }
 
     @Override
-    public Optional<Member> findById(String id) {
-        return Optional.ofNullable(store.get(id));
+    public Member findById(String id) {
+        return store.get(id);
     }
 
     @Override
-    public Optional<Member> findByName(String name) {
-        return store.values().stream()
-                .filter(member -> member.getName().equals(name)).findAny();
+    public List<Member> findByName(String name) {
+        return new ArrayList<>(store.values());
     }
 
     @Override

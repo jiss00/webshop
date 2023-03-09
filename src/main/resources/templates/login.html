@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE HTML>
 <style>
-   .main {
+.container{
 position: absolute;
 left : 50% ;
 top: 50% ;
@@ -15,45 +14,35 @@ flex-direction: column;
 border: 2px solid black;
 border-radius: 7px;
 }
-
-.logo {
-margin-top: 30px;
-margin-bottom: 40px;
-}
-
-#login {
-width: 100%;
-background-color: green;
-border-color: transparent;
-color: white;
-}
-
 .account {
 display: block;
-margin-bottom: 10px;
-padding: 15px;
+margin-bottom: 8px;
+padding: 10px;
 border: 1px solid lightgray;
 border-radius: 3px;
 }
-
-#alert {
-border-color: transparent;
+.logo{
+font-size:30px;
+}
+.button{
+width : 120px;
+height : 50px;
+background-color : green;
+color: white
 }
 </style>
-<html>
-<head>
-  <title>로그인</title>
-  <meta charset="utf-8">
-</head>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8">
 <body>
-<div class="main">
-  <h1 class="logo">UGV</h1>
-  <div class="container">
-    <input type="text" placeholder="아이디" id="id" class="account">
-    <input type="password" placeholder="비밀번호" id="password" class="account">
-    <button id="login" class ="account">로그인</button>
-  </div>
-</div>
-<script src="script.js"></script>
+<div class="container">
+  <form action="login" method="post">
+    <div class="form-group">
+      <label class ="logo">로그인하기</label>
+      <input type="text" id="id" name= "id" class="account" placeholder="아이디를 입력하세요">
+      <input type="password" id="password" name="pw" class="account" placeholder="비밀번호를 입력하세요">
+    </div>
+    <button type="submit" class ="button">로그인</button>
+  </form>
+</div> <!-- /container -->
 </body>
 </html>

@@ -7,12 +7,13 @@ public class MemberForm {
     private String tel;
     private String address;
 
+    //자바 스크립트를 이용해 회원정보 5가지 모두 기입할 수 있도록 해야함!!!
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+            this.name = name;
     }
 
     public String getId() {
