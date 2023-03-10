@@ -11,11 +11,11 @@ import phj.webshop.service.MemberService;
 
 @Controller
 public class LoginController {
-    private MemoryMemberRepository memoryMemberRepository;
+    private MemoryMemberRepository repository;
     private MemberService memberService;
     @Autowired
-    public LoginController(MemoryMemberRepository memoryMemberRepository) {
-        this.memoryMemberRepository = memoryMemberRepository;
+    public LoginController(MemoryMemberRepository repository) {
+        this.repository = repository;
     }
 
     @GetMapping("login")
@@ -24,8 +24,8 @@ public class LoginController {
     }
 
     @PostMapping(value = "login")
-    public String check(String Id,String Pw){
-        if(memberService.login(Id, Pw)) return "redirect:/";
+    public String check(String id,String pw){
+        if(memberService.login(id,pw) == true) return "redirect:/";
         else return "login_fail";
     }
 }
