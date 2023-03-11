@@ -17,7 +17,7 @@ public class MemberService {
 
     public boolean login(String id,String pw){
         member= memberRepository.findById(id);
-        if(pw.equals(member.getPw())) return true;
+        if(member.getPw().equals(pw)) return true;
         else return false;
     }
 
